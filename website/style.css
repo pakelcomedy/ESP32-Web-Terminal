@@ -1,0 +1,155 @@
+/* style.css - IoT Themed */
+
+:root {
+  --primary-color: #00b894;
+  --secondary-color: #353b48;
+  --accent-color: #fdcb6e;
+  --bg-color: #2f3640;
+  --panel-bg: #353b48;
+  --text-color: #f5f6fa;
+  --border-color: #444;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  padding: 1rem;
+  background: var(--secondary-color);
+  text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.header h1 {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.panel {
+  background: var(--panel-bg);
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel h2 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.toolbar {
+  margin-bottom: 0.5rem;
+}
+
+.toolbar button {
+  background: var(--accent-color);
+  border: none;
+  color: var(--bg-color);
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toolbar button:hover {
+  background: #e1b12c;
+}
+
+.file-list {
+  list-style: none;
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.file-list li {
+  padding: 0.4rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.file-list li:last-child {
+  border-bottom: none;
+}
+
+.file-list button {
+  background: transparent;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Terminal */
+#web-terminal {
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal {
+  background: #000;
+  color: #0f0;
+  font-family: var(--font-mono);
+  flex: 1;
+  padding: 0.5rem;
+  border-radius: 4px;
+  overflow-y: auto;
+  height: 300px;
+}
+
+#cmd-input {
+  background: var(--panel-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0.5rem;
+  font-family: var(--font-mono);
+  margin-top: 0.5rem;
+  border-radius: 4px;
+}
+
+.footer {
+  text-align: center;
+  padding: 0.5rem;
+  background: var(--secondary-color);
+  border-top: 2px solid var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}

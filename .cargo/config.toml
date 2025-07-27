@@ -1,0 +1,11 @@
+[build]
+target = "xtensa-esp32-espidf"
+
+[unstable]
+build-std = ["std", "panic_abort"]
+
+[target.xtensa-esp32-espidf]
+runner = "espflash flash --monitor"
+
+[env]
+ESP_LOGLEVEL = "INFO"

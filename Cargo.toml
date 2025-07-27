@@ -1,0 +1,29 @@
+[package]
+name = "esp32-web-terminal"
+version = "0.1.0"
+authors = ["Your Name <you@example.com>"]
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0"
+log = "0.4"
+esp-idf-svc = { version = "0.48", features = ["experimental", "alloc"] }
+esp-idf-sys = { version = "0.34", features = ["binstart"] }
+heapless = "0.7"
+embedded-svc = "0.24"
+
+[build-dependencies]
+embuild = "0.31"
+
+[features]
+default = ["std"]
+std = ["esp-idf-sys/std", "esp-idf-svc/std", "esp-idf-svc/experimental"]
+
+[profile.dev]
+opt-level = "z"
+debug = true
+
+[profile.release]
+opt-level = "s"
+debug = false
+lto = true

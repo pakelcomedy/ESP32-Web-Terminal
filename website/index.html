@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ESP32 Web Terminal & File Explorer</title>
+  <!-- IoT Theme Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>ESP32 IoT Web Terminal & File Explorer</h1>
+    <p class="subtitle">Manage SPIFFS files & execute serial commands remotely</p>
+  </header>
+
+  <main class="container">
+    <!-- File Explorer Section -->
+    <section id="file-explorer" class="panel">
+      <h2>File Explorer</h2>
+      <div class="toolbar">
+        <button id="btn-upload">Upload File</button>
+        <button id="btn-refresh">Refresh List</button>
+      </div>
+      <ul id="file-list" class="file-list"></ul>
+      <input type="file" id="file-input" hidden>
+    </section>
+
+    <!-- Web Terminal Section -->
+    <section id="web-terminal" class="panel">
+      <h2>Web Terminal</h2>
+      <div id="term" class="terminal"></div>
+      <input type="text" id="cmd-input" placeholder="Enter command..." autocomplete="off">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>&copy; 2025 ESP32 IoT Dashboard</small>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
