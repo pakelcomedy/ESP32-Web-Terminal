@@ -19,3 +19,4 @@ esp32-web-terminal/
     ├── style.css           # Optional styles
     └── script.js           # WebSocket terminal + file APIs
 ```
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/68ed8230-f7aa-4ae1-9feb-43cfd4be1601" />
